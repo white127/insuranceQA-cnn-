@@ -143,7 +143,7 @@ class QACnn(object):
     self.params = []
 
     lookup_table = theano.shared(word_embeddings)
-    self.params += [lookup_table]
+    #self.params += [lookup_table]
     #input1-问题, input2-正向答案, input3-负向答案
     #将每个字替换成字向量
     input_matrix1 = lookup_table[T.cast(input1.flatten(), dtype="int32")]
